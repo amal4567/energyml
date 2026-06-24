@@ -623,7 +623,7 @@ header { visibility: hidden; }
 # CHARGEMENT MODÈLES (4 modèles par meter) & DONNÉES
 # =====================================================
 
-BASE_PATH = "/content/drive/MyDrive/project_ML"
+BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 
 DATA_PATH = os.path.join(BASE_PATH, "data", "model_dataset.parquet")
 
