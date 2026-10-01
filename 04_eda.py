@@ -36,19 +36,20 @@ print(df.describe())
 # TARGET DISTRIBUTION
 # =====================================================
 
-plt.figure(figsize=(10, 5))
+print("Nombre de lignes :", len(df))  # devrait afficher 15000
 
+plt.figure(figsize=(10, 5))
 sns.histplot(
     df["meter_reading"],
     bins=100,
     kde=True
 )
-
-plt.title("Distribution of Meter Reading")
+plt.title(f"Distribution of Meter Reading (n={len(df)})")
 plt.xlabel("Meter Reading")
 plt.ylabel("Frequency")
-
+plt.ylim(0, 15000)
 plt.show()
+
 
 # =====================================================
 # LOG TRANSFORMATION
